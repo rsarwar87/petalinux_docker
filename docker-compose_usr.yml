@@ -1,0 +1,24 @@
+version: '3'
+services:
+  plnx:
+    build:
+        context: /media/2TB/soft/petalinux-docker
+        dockerfile: Dockerfile_user
+        args:
+          USER_ID: ${IUID}
+          USER_NAME: ${whoami}
+          GROUP_ID: ${IGID}
+    #image: "${IMAGENAME}"
+    #user:  "${IUID}:${IGID}"
+    environment:
+        - pVERSION=${VERSION}
+        - ARCH=${ARCH}
+    volumes: 
+        - /opt/Xilinx:/opt/Xilinx
+        - /home/${whoami}/workspace:/home/${whoami}/workspace
+        - /etc/passwd:/etc/passwd
+    working_dir:
+        ${LDIR}
+        #command: 
+    # - bash -c "echo \"/opt/Xilinx/PetaLinux/${VERSION}/settings.sh\" >> /home/plnx/.bashrc"
+    #    bash -c "source /home/plnx/.bashrc"

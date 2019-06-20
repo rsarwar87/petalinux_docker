@@ -1,0 +1,18 @@
+FROM  	plnx-ubuntu16 
+
+ARG USER_ID=1001
+ARG GROUP_ID=1001
+ARG USER_NAME=rsarwar
+USER  root
+RUN   groupadd -g ${GROUP_ID} ${USER_NAME}
+RUN 	adduser  --disabled-password --gecos '' -u=${USER_ID} -gid ${GROUP_ID} ${USER_NAME}
+
+RUN 	echo "${USER_NAME} ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
+
+USER 	${USER_NAME}
+RUN 	echo "source /opt/Xilinx/PetaLinux/\$pVERSION/settings.sh" >> /home/${USER_NAME}/.bashrc
+RUN 	echo "source /opt/Xilinx/PetaLinux/\$pVERSION/components/yocto/source/\$ARCH/environment-*" >> /home/${USER_NAME}/.bashrc
+
+WORKDIR /home/${USER_NAME}/workspace
+
+
