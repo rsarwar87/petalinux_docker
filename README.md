@@ -12,7 +12,7 @@ Firstly, create the image from anywhere using the following command: docker buil
 Upate the enviornments tp reflect your host machine. Than copy the yml files into your petalinux workspace 
 and run: 
 
-'''docker-compose run --rm plnx "/bin/bash"  '''
+```docker-compose run --rm plnx "/bin/bash"  ```
 
 OR whatever command you wish to run
 
