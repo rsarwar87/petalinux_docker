@@ -13,7 +13,8 @@ Upate the enviornments to reflect your host machine. Than copy the yml files int
 and run: 
 
 ```source plnx-docker-export
-plx-docker-compose run --rm plnx "/bin/bash"  ```
+plx-docker-compose run --rm plnx "/bin/bash"  
+```
 
 OR whatever command you wish to run
 
