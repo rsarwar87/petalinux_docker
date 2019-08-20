@@ -5,7 +5,7 @@ Both images uses --volume to sync workspace and the place where Petalinux are in
 It expects them in /opt/Xilinx/Petalinux/$VERSION/
 The plnx-docker-export contains some enviornment variables which are needed to be set correctly.
 
-## default image (Dockerfile and docer-compose.yml):
+### default image (Dockerfile and docer-compose.yml):
 It loads a image with all the nessasay steps which is needed to mirror the user id/enviornemnt and others
 to ensure that the docker works seemlessly. only one image is created for all users.
 Firstly, create the image from anywhere using the following command: docker build -t petalnx-ubuntu16 . 
@@ -18,12 +18,13 @@ plx-docker-compose run --rm plnx "/bin/bash"
 
 OR whatever command you wish to run
 
-## Handling settings:
-in the  yaml config file, please update the parameters
 
-## The docker-compose_usr.yml 
+### The docker-compose_usr.yml 
 It requires firstly to create the original image Dockerfile_orig. following that, the subsequent image containing 
 the user profile is created from dockerr-compose
+
+## Handling settings:
+in the  yaml config file, please update the parameters
 
 ## Troubleshooting:
 1. if you wish to run ``` petalinux-config -c kernel ```,  please first run script /dev/null
