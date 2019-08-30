@@ -62,7 +62,7 @@ RUN   echo "echo \"export ARCH=\${ARCH} \" >> /home/$user/env.sh" >> /home/$user
 RUN   echo "echo \"export PWD=\${PWD} \" >> /home/$user/env.sh" >> /home/$user/.bashrc
 RUN   echo "sudo mv /home/$user/env.sh /home/\${USER_NAME}/." >> /home/$user/.bashrc 
 RUN 	echo "sudo chown \${USER_NAME}:\${USER_NAME} /home/\${USER_NAME}" >> /home/$user/.bashrc 
-RUN 	echo "sudo update-locale LANG=en_EN.UTF-8 LANGUAGE" >> /home/$user/.bashrc 
+RUN 	echo "sudo update-locale LANG=en_US.UTF-8 LANGUAGE" >> /home/$user/.bashrc 
 RUN 	echo "sudo su - \${USER_NAME}" >> /home/$user/.bashrc 
 #RUN 	echo "source /opt/Xilinx/PetaLinux/\$pVERSION/settings.sh" >> /home/$user/.bashrc
 #RUN 	echo "source /opt/Xilinx/PetaLinux/\$pVERSION/components/yocto/source/\$ARCH/environment-*" >> /home/$user/.bashrc
