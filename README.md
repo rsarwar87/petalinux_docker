@@ -26,6 +26,8 @@ the user profile is created from dockerr-compose
 ## Handling settings:
 in the  yaml config file, please update the parameters
 
+Alternative, place plnx-docker-export in the work directory and source it 
+
 ## Troubleshooting:
 1. if you wish to run ``` petalinux-config -c kernel ```,  please first run script /dev/null
 2. if petalinux complains about language standard, please run the following command:
