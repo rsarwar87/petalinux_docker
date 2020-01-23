@@ -19,7 +19,7 @@ plx-docker-compose run --rm plnx "/bin/bash"
 OR whatever command you wish to run
 
 
-### The docker-compose_usr.yml 
+### The docker-compose_usr.yml  (recommened)
 It requires firstly to create the original image Dockerfile_orig. following that, the subsequent image containing 
 the user profile is created from dockerr-compose
 
